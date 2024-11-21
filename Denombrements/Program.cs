@@ -8,6 +8,16 @@ namespace Denombrements
 {
     class Program
     {
+
+        static void Saisi(out int n, out int t)
+        {
+            Console.Write("nombre total d'éléments à gérer = "); // le nombre d'éléments à gérer
+            t = int.Parse(Console.ReadLine()); // saisir le nombre
+            Console.Write("nombre d'éléments dans le sous ensemble = "); // le sous ensemble
+            n = int.Parse(Console.ReadLine()); // saisir le nombre
+
+        }
+
         static void Main(string[] args)
         {
             int c = 1;
@@ -36,10 +46,7 @@ namespace Denombrements
                 {
                     if (c == 2)
                     {
-                        Console.Write("nombre total d'éléments à gérer = "); // le nombre d'éléments à gérer
-                        int t = int.Parse(Console.ReadLine()); // saisir le nombre
-                        Console.Write("nombre d'éléments dans le sous ensemble = "); // le sous ensemble
-                        int n = int.Parse(Console.ReadLine()); // saisir le nombre
+                        Saisi(out int t, out int n);
                         // calcul de r
                         long r = 1;
                         for (int k = (t - n + 1); k <= t; k++)
